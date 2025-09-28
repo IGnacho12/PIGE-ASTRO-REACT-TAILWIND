@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+div {
+  @apply flex flex-col;
+}
+
+dt {
+  @apply font-semibold text-black ;
+}
+
+dd {
+  @apply text-black;
+}
