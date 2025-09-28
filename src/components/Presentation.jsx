@@ -1,5 +1,4 @@
 import React from "react";
-import Tooltip from "./Tooltip.jsx";
 
 export default function Presentation() {
   return (
