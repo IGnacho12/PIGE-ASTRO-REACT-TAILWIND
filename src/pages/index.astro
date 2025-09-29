@@ -1,11 +1,73 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Presentation from "../components/Presentation.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import ToolTip from "../components/Basics/ToolTip.jsx";
 ---
 
 <Layout>
-  <Presentation />
+  <main
+    class="border border-[var(--border)] w-10/12 mx-auto bg-[var(--background)] px-5 py-12 h-full"
+  >
+    <header class="flex flex-col justify-center items-center mb-24">
+      <ToolTip
+        client:load
+        content="PIGE (Plataforma Integral de Gestión Escolar)"
+      >
+        <h1 class="text-5xl md:text-6xl font-bold tracking-tight">
+          ¡Bienvenido a{" "}
+          <span
+            class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500"
+          >
+            PIGE
+          </span>
+          !
+        </h1>
+      </ToolTip>
+
+      <p>
+        Este proyecto esta pensado para facilitarle la vida a los Alumnos,
+        Profesores y Directivos de la EPETP10
+      </p>
+      <hr />
+    </header>
+
+    <p class="mx-auto">¡Seleciona alguno!</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+      <a href="student"
+        class="border border-[var(--border)] rounded-md px-4 py-2 hover:border-blue-600 hover:bg-blue-300/20 transition-colors duration-150 group hover:cursor-pointer"
+      >
+        <span
+          class="font-bold text-lg italic text-black group-hover:text-blue-600"
+          >Alumnos</span
+        >
+        <p class="text-slate-800/80 group-hover:text-black font-semibold">
+          Consulta tus faltas y calificaciones en tiempo real, y recibe
+          información detallada sobre tu asistencia.
+        </p>
+      </a>
+      <a
+        class="border border-[var(--border)] rounded-md px-4 py-2 hover:border-blue-600 hover:bg-blue-300/20 transition-colors duration-150 group hover:cursor-pointer"
+      >
+        <span
+          class="font-bold text-lg italic text-black group-hover:text-blue-600"
+          >Profesores</span
+        >
+        <p class="text-slate-800/80 group-hover:text-black font-semibold">
+          Registra calificaciones y marca asistencia de manera rápida y
+          sencilla.
+        </p>
+      </a>
+      <a
+        class="border border-[var(--border)] rounded-md px-4 py-2 hover:border-blue-600 hover:bg-blue-300/20 transition-colors duration-150 group hover:cursor-pointer"
+      >
+        <span
+          class="font-bold text-lg italic text-black group-hover:text-blue-600"
+          >Directivos</span
+        >
+        <p class="text-slate-800/80 group-hover:text-black font-semibold">
+          Accede a información completa sobre alumnos, calificaciones, materias,
+          tutores y más.
+        </p>
+      </a>
+    </div>
+  </main>
 </Layout>

@@ -38,7 +38,7 @@ export default function ProfileContainer({ filterText = "" }) {
   ];
 
   return (
-    <main className="border border-[var(--border)] min-h-32 w-full p-4 space-y-4">
+    <main className="border border-[var(--border)] min-h-32 w-1/2 mx-auto p-4 space-y-4">
       {PEOPLE.filter((person) =>
         person.name.toLowerCase().includes(filterText.toLowerCase())
       ).map((person) => (

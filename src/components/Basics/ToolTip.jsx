@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 
-export default function Tooltip({
+export default function ToolTip({
   children,
   content,
   delay = 80,

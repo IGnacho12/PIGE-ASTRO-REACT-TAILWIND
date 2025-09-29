@@ -16,10 +16,12 @@ export default function ProfileCard({
       {/* Profile Info */}
       <article className="flex flex-row justify-between items-start">
         <img
-          className="w-1/4 p-2 rounded-xl"
-          src={profileImage}
+          className="max-w-1/4 p-2 rounded-xl"
+          src="defaultProfilePic.avif"
           alt={`Foto de perfil de ${name}`}
-          onError={(e) => (e.currentTarget.src = "/defaultProfilePic.avif")}
+          onError={(e) => {
+
+          }}
         />
 
         <section className="ml-4 w-3/4">
