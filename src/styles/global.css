@@ -2,7 +2,7 @@
 /* Fuente */
 @font-face {
   font-family: "Geist";
-  src: url("/geistVariable.ttf");
+  src: url("public/geistVariable.ttf");
 }
 * {
   font-family: "Geist";
